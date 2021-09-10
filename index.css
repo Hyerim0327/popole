@@ -147,13 +147,6 @@ article a{
    margin-left: 7.2917vw;
    width: 640px;
 }
-.content4 p +a{
-   border-radius: 50px;
-   border: 1px solid #fff;
-   width: 150px;
-   padding: 10px;
-   text-align: center;
-}
 .content2{
    display: flex;
    align-items: center;
@@ -165,7 +158,6 @@ article a{
 .content4{
    width: 640px;
    padding-left: 57.0313vw;
-   position: relative;
 }
 .content1 div,.content4 div{
    height: 570px;
