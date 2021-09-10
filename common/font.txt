@@ -1,0 +1,56 @@
+Prenton RP Pro Regular
+
+font-family: prenton, sans-serif;
+
+font-weight: 400;
+
+font-style: normal;
+---------------------------
+Prenton RP Pro Medium
+
+font-family: prenton, sans-serif;
+
+font-weight: 500;
+
+font-style: normal;
+---------------------------
+Prenton RP Pro Bold
+
+font-family: prenton, sans-serif;
+
+font-weight: 700;
+
+font-style: normal;
+
+---------------------------
+Prenton RP Pro Bold Italic
+
+font-family: prenton, sans-serif;
+
+font-weight: 700;
+
+font-style: italic;
+---------------------------
+Prenton RP Pro Black Italic
+
+font-family: prenton, sans-serif;
+
+font-style: italic;
+
+font-weight: 900;
+---------------------------
+Prenton RP Pro Black
+
+font-family: prenton, sans-serif;
+
+font-style: normal;
+
+font-weight: 900;
+---------------------------
+숫자
+font-family: prenton-condensed, sans-serif;
+
+font-style: normal;
+
+font-weight: 700;
+----------------------------

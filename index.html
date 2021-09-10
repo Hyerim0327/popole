@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>popole_mainpage</title>
+<!-- ** open Graph -->
+<!-- 제목 -->
+<meta property="og:title" content="kim-hyerin_popole_mainpage">
+<!-- 설명 -->
+<meta property="og:description" content="kim-hyerin_popole_mainpage">
+<!-- 이미지 -->
+<meta property="og:image" content="http://kim009333.dothome.co.kr/popole/img/popole_main.png">
+<!-- 주소 -->
+<meta property="og:url" content="http://kim009333.dothome.co.kr/popole/index.html">
+<!-- normlize -->
+<link rel="stylesheet" href="common/normalize.css">
+<!-- adob font -->
+<link rel="stylesheet" href="https://use.typekit.net/ngj7hnd.css">
+<!-- 파비콘 -->
+<link rel="shortcut icon" href="img/face_CeU_icon.ico" type="image/x-icon">
+<!-- css -->
+<link rel="stylesheet" href="index.css">
+<!-- jquery cdn-->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script src="common/jquery-ui.min.js"></script>
+<script src="common/typewriter/core.js"></script>
+</head>
+<body>
+ <header>
+    <div class="intro">
+    <div class="logo">
+       <img src="img/basics/png/face.png" alt="logo">
+       <span>Kim Hye Rim</span>
+   </div>
+   <div class="info">
+      <span>PORTFOLOI</span>
+      <address><span>Say hello!</span>010 5389 7668</address>
+   </div>
+</div>
+    <h1>
+      <div id="typing"></div>
+      <div class="face">아이콘이미지</div>
+      <div class="Charm">아이콘이미지2</div>
+   </h1>
+    
+    <ul class="btn_warp">
+       <li class="btn"><a href="#project">CHECK OUT OUR PORTFOLOI</a></li>
+       <li class="btn"><a href="#">SAY HELLO</a></li>
+    </ul>
+ </header>
+ <main>
+    <section class="project" id="project">
+       <h2>PROJECT</h2>
+       <article class="content1">
+          <div>컨텐츠박스</div>
+          <h4>제목</h4>
+          <p>설명</p>
+       </article>
+       <article class="content2">
+         <div class="luce">꾸밈요소</div>
+         <aside>
+         <div>컨텐츠박스</div>
+         <h4>제목</h4>
+         <p>설명</p>
+      </aside>
+      </article>
+      <article class="content3">
+         <div>컨텐츠박스</div>
+         <h4>제목</h4>
+         <p>설명</p>
+      </article>
+      <article class="content4">
+         <a href="cocacola/cocacolasub.html">
+         <div>컨텐츠박스</div>
+         <h4>CocaCola Journey 웹사이트 리디자인</h4>
+         </a>
+         <p>반응형으로 메인페이지만 제작되었습니다</p>
+      </article>
+    </section>
+    <section class="skill">
+       <h2>SKILL</h2>
+       <div class="skillbox">
+       <article class="skill1">
+          <h4>PUBLISHING</h4>
+          <p><span>디자인을 보고 웹표준 및 웹 접근성을</span> <span>고려하여 미디어쿼리를 이용한 반응형</span> 웹사이트 제작이 가능합니다.</p>
+          <ul>
+             <li>웹사이트 제작</li>
+             <li>앱 프로토타입 제작</li>
+             <li>반응형 웹</li>
+             <li>웹접근성 & 웹표준</li>
+          </ul>
+       </article>
+       <article class="skill2">
+          <h4>DESIGN</h4>
+          <p><span>UI & UX를 고려한 디자인을 구성하고</span> <span>Adobe의 대표적인 디자인툴 Photoshop,</span>Illustrator, Xd를 사용하여 구현해 낼수 있습니다.</p>
+          <ul>
+             <li>마케팅 콘텐츠 디자인</li>
+             <li>웹 앱 프로토타입 디자인</li>
+             <li>앱 스플래시 디자인</li>
+             <li>UI 디자인</li>
+          </ul>
+       </article>
+       <article class="skill3">
+          <h4>OTHETS</h4>
+          <p><span>팀원들과 원활한 협업을 위한</span> 프로그램을 활용 할수 있습니다.</p>
+          <ul>
+             <li>FTP</li>
+             <li>GIT & GITHUB</li>
+          </ul>
+       </article>
+      </div>
+    </section>
+   </main>
+    <footer>
+      <div class="line"></div>
+      <div class="footer">
+      <div class="cute"></div>
+      <p>빠른 습득력과 뛰어난 응용력을 바탕으로 <span>배움을 게을리하지 않는 신입 웹 퍼블리셔가 되겠습니다.</span><span>저의 포트폴리오가 마음에 드셨다면, 언제든 연락주세요!<span>감사합니다</span></span></p>
+      <address>
+         <p class="email"><a href= "mailto:kim009333@naver.com">kim009333@naver.com</a><span>010 5389 7668</span></p>
+         <p class="addr">경기도 이천시 영창로 314번길51 <span>(이천역,이천터미널 15분거리)</span></p>
+      </address>
+   </div>
+    </footer>
+ <!-- js -->
+   <script>
+  $('a[href="#"]').on('click',function(e){
+         e.preventDefault();
+      });
+      let height = screen.height;
+      console.log(height);
+      if(height > 800){
+         let ht = $(window).height();
+         $('header').height(ht);
+      }
+ $('.btn').children('a').eq(0).hover(function() {
+   $(this).stop().animate({backgroundColor:'#000',color:'#fff'},300);
+},function() {
+   $(this).stop().animate({backgroundColor:'#ead600',color:'#000'},300);
+});
+$('.btn').children('a').eq(1).hover(function() {
+   $(this).stop().animate({backgroundColor:'#000',color:'#fff'},300);
+},function() {
+   $(this).stop().animate({backgroundColor:'transparent',color:'#000'},300);
+});
+$('.btn').eq(1).hover(function(){
+   $('.Charm').stop().fadeIn();
+   $('.face').stop().fadeOut();
+},function(){
+   $('.Charm').stop().fadeOut();
+   $('.face').stop().fadeIn();
+});
+const instance = new Typewriter('#typing', {
+   strings: [`<span class='txt'>FROM A LITTLE SPARK</span><span class='txt1'> MAY BURST A FLAME.</span>`], // 출력단어
+   autoStart: true, // 자동시작
+   loop:true, // 반복
+   pauseFor:3000,
+   cursor:'',
+   delay:250
+ });
+</script>
+</body>
+</html>
