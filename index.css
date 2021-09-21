@@ -274,3 +274,14 @@ footer span{
 .footer address{
    margin-left: 200px;
 }
+footer > a{
+   border-radius: 50%;
+   color: black;
+   display: block;
+   width: 50px; height: 50px;
+   text-indent: -9999px;
+   position: fixed;
+   bottom: 50px;
+   right: 50px;
+   background:url(img/basics/svg/top_fff.svg) no-repeat 50% / contain;
+}

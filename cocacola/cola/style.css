@@ -147,7 +147,7 @@ main .circlebox{
    width: calc(33.3333% - 30px);
    margin: 0 20px 0 10px;
    text-indent: -9999px;
-   transition: 2.5s;
+   
 }
 main h2{
    font-size: 69px;
@@ -164,13 +164,16 @@ main .maintxt h2:nth-child(2){
 }
 .banner1{
    background: url(img/jpg/bg_2_tab.jpg) no-repeat 50% / cover;
+   transition: 1s;
 }
 .banner2{
    background: url(img/jpg/Management.jpg) no-repeat 50% 70% / cover;
    margin: 0 20px 0 10px;
+   transition: 1s;
 }
 .banner3{
    background: url(img/png/limited.png) no-repeat 50% 0  / cover;
+   transition: 1s;
 }
 .btn0{
    position: relative;
@@ -247,12 +250,14 @@ aside{
    height: 15.6250vw;
    background: url(img/jpg/globalcoca.jpg) no-repeat 50% / cover;
    text-indent: -9999px;
+   transition: 0.3s;
 }
 .story h4{
    margin: 0;
    padding: 21.280px 10px;
    border: 1px solid #ddd;
    font-size: 18px;
+   transition: 0.3s;
 }
 .btn1,.btn2,.btn3{
    display: flex;
@@ -295,11 +300,13 @@ button img{
 .campaign a h4{
    font-size: 18px;
    margin: 10px 0 18px;
+   transition: .3s;
 }
 .campaign a p{
    margin: 0;
    height: 100px;
    overflow: hidden;
+   transition: .3s;
 }
 .box{
    background-color: #0569c5;
@@ -331,6 +338,7 @@ button img{
 }
 .journeytv a h5{
    font-size:16px;
+   transition: 0.5s;
 }
 .journeytv a img{
    width: 40px;
@@ -420,6 +428,7 @@ h3 span{
    flex-flow: column;
    justify-content: space-around;
    align-items: center;
+   opacity: 0.4;
 }
 .iconbox li:first-child{
    opacity: 1;
@@ -428,22 +437,15 @@ h3 span{
    width: 70px;
    height: 80px;
    vertical-align: top;
-   opacity: 0.4;
 }
-.iconbox li:first-child img,.iconbox li:first-child button{
-   opacity:1;
-}
-.iconbox li button{
-   opacity: 0.4;
-}
-.iconbox li:first-child .lian{
+/* .iconbox li:first-child .lian{
    border: 6px solid #000;
    background-color: #fff;
-}
+} */
 .iconbox li .lian{
    margin: 25px 0 35px;
    text-indent: -9999px;
-   background-color: #869db5;
+   background-color: #6f92b8;
    width: 1.198vw;
    height: 1.198vw;
    border-radius: 50%;
@@ -453,11 +455,10 @@ h3 span{
    content: '';
    width: 11.1vw;
    height: 1px;
-   background-color: #869db5;
+   background-color: #5e8cbe;
    display:block;
    position: absolute;
    top: 50%; left: 2.3727vw;
-   opacity:1;
 }
 .icon li:last-child .lian::after{
    content: '';

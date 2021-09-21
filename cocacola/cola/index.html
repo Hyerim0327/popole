@@ -11,9 +11,11 @@
 <meta property="og:title" content="코카콜라 홈페이지">
 <meta property="og:description" content="코카콜라 홈페이지.">
 <meta property="og:image" content="http://kim009333.dothome.co.kr/img/jpg/coca_main.jpg">
-<meta property="og:url" content="http://kim009333.dothome.co.kr/popole/cocacola/cola/index.html">
+<meta property="og:url" content="http://kim-hyerim-popole.netlify.app/popole/cocacola/cola/index.html">
 <!-- 노멀라이즈 -->
 <link rel="stylesheet" href="../../common/normalize.css">
+<!-- jquery -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 <!-- 폰트 -->
 <!-- font-family: 'Noto Sans KR', sans-serif; -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,11 +104,11 @@
          <button class="many"><img src="img/svg/add.svg" alt="플러스"></button>
       </div>
       <a href="#">
-         <h5>애틀랜타 월드오프 코카-콜라에 가다</h5>
+         <h5 class="h51">애틀랜타 월드오프 코카-콜라에 가다</h5>
          <img src="img/svg/playbtn.svg" alt="재생">
       </a>
       <a href="#">
-         <h5>하트 저수지 물 환원 프로젝트</h5>
+         <h5 class="h52">하트 저수지 물 환원 프로젝트</h5>
          <img src="img/svg/playbtn.svg" alt="재생">
       </a>
    </aside>
@@ -129,20 +131,20 @@
              <p>코카콜라와 함께 해서 더욱 맛있는 음식 이야기</p>
           </div>
     <ul class="icon">
-       <li>
+       <li class="food">
           <img src="img/svg/food.svg" alt="푸드">
           <div class="lian">lian</div>
           <button>푸드</button>
          </li>
-       <li>
+       <li class="travel">
          <img src="img/svg/travel.svg" alt="여행">
          <div class="lian">lian</div>
          <button>여행</button></li>
-       <li>
+       <li class="sports">
          <img src="img/svg/sports.svg" alt="스포츠">
          <div class="lian">lian</div>
          <button>스포츠</button></li>
-       <li><img src="img/svg/cocacola.svg" alt="컬쳐">
+       <li class="coca"><img src="img/svg/cocacola.svg" alt="컬쳐">
          <div class="lian">lian</div>
          <button>컬쳐</button></li>
     </ul>
@@ -159,6 +161,7 @@
  </footer>
 </div>
 <script>
+   // 메인 배너
    let ban = document.querySelectorAll('.banner');
    let pr = document.getElementsByClassName('PREV')[0];
    let ne = document.getElementsByClassName('NEXT')[0];
@@ -212,6 +215,230 @@
       }
    };
    pl.addEventListener('click', pl_evt);
+   
+   // story 
+   let story_pr = document.getElementsByClassName('prev')[0];
+   let story_ne = document.getElementsByClassName('next')[0];
+   let story_pl = document.getElementsByClassName('play')[0];
+   let story_bg = ['url(img/jpg/globalcoca.jpg) no-repeat 50% / cover','url(img/png/carpool.png) no-repeat 50% / cover'];
+   let story_txt = [`짜릿한 순간을 함께 해온 코카-콜라의 오늘과 미래`, `꿈을 향한 짜릿한 여정, 저니 카풀 프로젝트!`];
+   let story_h4 = $('.story h4');
+   let story_img = $('.story .img');
+   let j = 0;
+   
+  story_ne.addEventListener('click',function() {
+      if(j<story_bg.length-1){
+         j++;
+      }
+      else{
+         j=0;
+      }
+      story_img.css('background',story_bg[j]);
+      story_h4.text(story_txt[j]);
+   });
+   story_pr.addEventListener('click',function() {
+      if(j<=0){
+         j = story_bg.length-1;
+      }
+      else{
+         j--;
+      }
+      story_img.css('background',story_bg[j]);
+      story_h4.text(story_txt[j]);
+   });
+   
+   let time = setInterval(function () {
+      if (j<story_bg.length-1) {
+          j++;
+       }
+       else{
+          j = 0;
+       }
+       story_img.css('background',story_bg[j]);
+      story_h4.text(story_txt[j]);
+    },3000) // 3초마다 실행
+
+
+let loop = true;
+
+   let story_pl_evt = function() {
+   if(loop){
+      clearInterval(time);
+      loop = false;
+   }else{
+      time = setInterval(function () {
+      if (j<story_bg.length-1) {
+          j++;
+       }
+       else{
+          j = 0;
+       }
+       story_img.css('background',story_bg[j]);
+      story_h4.text(story_txt[j]);
+    },3000) // 3초마다 실행
+      loop = true;
+   }
+};
+story_pl.addEventListener('click', story_pl_evt);
+// campaign
+   let campaign_pr = document.getElementsByClassName('prev')[1];
+   let campaign_ne = document.getElementsByClassName('next')[1];
+   let campaign_pl = document.getElementsByClassName('play')[1];
+   let campaign_title = [`멈출 수 없는 분리 배출, 원더플 캠페인 시즌 2`,`내 꿈과 미래를 찾아서 청소년 드림업 캠프`];
+   let campaign_txt = [`코카-콜라를 좋아한다면 놓치지 않는 친환경 캠페인이 돌아왔다! 음료도 마시고, 친환경 캠페인도 참가하고, 굿즈까지! 한번(ONE) 더(THE) 사용되는 플라스틱(PL)원더플!...`, `청소년들의 입시 스트레스를 위해 코카-콜라가 준비한 ‘스포츠 클래스’와 꿈과 미래에 대한 고민을 나누고 자신의 가치를 발견하는 ‘드림 클래스’로 구성된 ‘청소년 드림업 캠프’...`];
+   let campaign_h4 = $('.campaign h4');
+   let campaign_p = $('.campaign p');
+   let k = 0;
+
+  campaign_ne.addEventListener('click',function() {
+      if(k<campaign_title.length-1){
+         k++;
+      }
+      else{
+         k=0;
+      }
+      campaign_p.text(campaign_txt[k]);
+      campaign_h4.text(campaign_title[k]);
+   });
+   campaign_pr.addEventListener('click',function() {
+      if(k<=0){
+         k = campaign_title.length-1;
+      }
+      else{
+         k--;
+      }
+      campaign_p.text(campaign_txt[k]);
+      campaign_h4.text(campaign_title[k]);
+   });
+   
+   let camptime = setInterval(function () {
+      if (k<campaign_title.length-1) {
+          k++;
+       }
+       else{
+          k = 0;
+       }
+       campaign_p.text(campaign_txt[k]);
+      campaign_h4.text(campaign_title[k]);
+    },3000) // 3초마다 실행
+
+
+let camploop = true;
+
+   let campaign_pl_evt = function() {
+   if(camploop){
+      clearInterval(camptime);
+      camploop = false;
+   }else{
+      time = setInterval(function () {
+      if (k<campaign_title.length-1) {
+          k++;
+       }
+       else{
+          k = 0;
+       }
+       campaign_p.text(campaign_txt[k]);
+      campaign_h4.text(campaign_title[j]);
+    },3000) // 3초마다 실행
+    camploop = true;
+   }
+};
+campaign_pl.addEventListener('click', campaign_pl_evt);
+
+// journeytv
+   
+   let journeytv_pl = document.getElementsByClassName('play')[2];
+   let journeytv_title1 = [`애틀랜타 월드오프 코카-콜라에 가다`,`청춘을 위한 쿨한 언니의 응원`];
+   let journeytv_title2 = [`하트 저수지 물 환원 프로젝트`,`혜리의 맛있게 먹고 쿨하게 푸는 하루!`];
+   
+   let journeytv_h51 = $('.journeytv .h51');
+   let journeytv_h52 = $('.journeytv .h52');
+   let r = 0;
+
+   let tvtime = setInterval(function () {
+      if (r<journeytv_title1.length-1) {
+          r++;
+       }
+       else{
+          r = 0;
+       }
+       journeytv_h51.text(journeytv_title1[r]);
+       journeytv_h52.text(journeytv_title2[r]);
+    },3000) // 3초마다 실행
+
+let tvloop = true;
+
+   let journeytv_pl_evt = function() {
+   if(tvloop){
+      clearInterval(tvtime);
+      tvloop = false;
+   }else{
+      time = setInterval(function () {
+      if (r<journeytv_title.length-1) {
+          r++;
+       }
+       else{
+          r = 0;
+       }
+       journeytv_h51.text(journeytv_title1[r]);
+       journeytv_h52.text(journeytv_title2[r]);
+    },3000) // 3초마다 실행
+    tvloop = true;
+   }
+};
+journeytv_pl.addEventListener('click', journeytv_pl_evt);
+// lief
+   let lief_pr = document.getElementsByClassName('prev')[2];
+   let lief_ne = document.getElementsByClassName('next')[2];
+   let lief_pl = document.getElementsByClassName('play')[3];
+   let liarr =[document.getElementsByClassName('food')[0],document.getElementsByClassName('travel')[0],document.getElementsByClassName('sports')[0],document.getElementsByClassName('coca')[0]]
+   let h = 0;
+   let lief_h3txt = ['푸드','여행','스포츠','컬쳐'];
+   let lief_h3step = ['STEP01','STEP02','STEP03','STEP04'];
+   let lief_ptxt = ['코카콜라와 함께 해서 더욱 맛있는 음식 이야기', '전 세계에서 즐기는 코카콜라','스포츠와 함께해서 더욱 맛있는 코카콜라','코카콜라가 함께한 여러 이야기'];
+   
+   // liarr[0].style.opacity = '0.4';
+   const reset2 = () => { // 익명함수 선언
+   liarr.forEach((slide) => {
+      slide.style.opacity = '0.4';
+});
+}
+
+   let lief_prevt = function() {
+      reset2();
+
+      if(h<=0){
+         h =  liarr.length-1;
+      }
+      else{
+         h--;
+      }
+       liarr[h].style.opacity = '1';   
+       $('.lieftxt h3').html('<span>'+lief_h3step[h]+'</span> '+lief_h3txt[h]); 
+       $('.lieftxt p').html('<p>'+lief_ptxt[h]+'</p>');
+      //  $('.iconbox li').eq(h).children('div').css({border:'6px solid #000',backgroundColor:'#fff'});
+   };
+   lief_pr.addEventListener('click', lief_prevt);
+
+   let lief_neevt = function() {
+      reset2();
+
+      if(h<liarr.length-1){
+         h++;
+      }
+      else{
+         h=0;
+      }
+       liarr[h].style.opacity = '1';
+       $('.lieftxt h3').html('<span>'+lief_h3step[h]+'</span> '+lief_h3txt[h]); 
+   $('.lieftxt p').html('<p>'+lief_ptxt[h]+'</p>'); 
+   };
+   lief_ne.addEventListener('click', lief_neevt);
+   
+   setInterval(() => {
+      lief_neevt();
+ }, 3000);
+
 </script>
 </body>
 </html>
