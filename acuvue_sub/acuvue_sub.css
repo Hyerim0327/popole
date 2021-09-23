@@ -71,15 +71,15 @@ body{
  }
  .banner .pc_img{
    width: 700px;
-   height: 400px;
-   background:url(../img/basics/png/a_pc.png) no-repeat 0 0 / cover;
+   height: 450px;
+   background:url(../img/basics/png/a_pc.png) no-repeat 0 10px / cover #fff;
    margin-right: 90px;
    border-radius: 25px 25px 0 0;
  }
  .banner .mobile_img{
    width: 360px;
-   height:330px;
-   background:url(../img/basics/png/a_mo.png) no-repeat 0 0 / cover;
+   height:380px;
+   background:url(../img/basics/png/a_mo.png) no-repeat 0 10px / cover #fff;
    border-radius: 30px 30px 0 0;
  }
  .project + h2{
@@ -180,7 +180,7 @@ body{
    display: flex;
    text-indent: -9999px;
    justify-content: space-around;
-   padding: 350px 0 50px;
+   padding: 260px 0 50px;
    /* position: relative; */
  }
  .ver_img div{
@@ -193,20 +193,20 @@ body{
   0 26px 221px -34px rgba(0, 0, 0, 0.44);
  }
  .ver_img .pc{
-   width: 600px;
-   height: 400px;
-   background:url(../img/basics/png/a_pc.png) no-repeat 50% / contain;
+   width: 667px;
+   height: 540px;
+   background:url(../img/basics/png/a_pc.png) no-repeat 50% 10px / cover #fff;
  }
  .ver_img .tap{
-  width: 410px;
+  width: 420px;
   height: 425px;
-  background:url(../img/basics/png/a_teb.png) no-repeat 50% 0 / contain;
+  background:url(../img/basics/png/a_teb.png) no-repeat 50% 10px / cover #fff;
   margin-top: 120px;
 }
 .ver_img .mobile{
   width: 200px;
   height: 600px;
-  background:url(../img/basics/png/a_mo.png) no-repeat 50% 0 / contain;
+  background:url(../img/basics/png/a_mo.png) no-repeat 50% 10px / contain #fff;
 }
 .mainbox .site{
   display: block;
