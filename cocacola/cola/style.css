@@ -75,6 +75,39 @@ header .info{
 .info li:last-child a{
    background: url(img/svg/menuba.svg) no-repeat 50%;
 }
+.menu{
+   background-color: #0569c5;
+   display: flex;
+   position: absolute;
+   width: 100%;
+   justify-content: space-around;
+   padding: 150px 0 20px;
+   font-size: 2rem;
+   top: 0;
+   color: #fff;
+   height: 350vh;
+   z-index: 1000;
+   display: none;
+}
+.menu a{
+   padding: 10px 60px;
+}
+.menu ul{
+   font-size: 1.7rem;
+}
+.menu.avt ul a:hover{
+   background-color: rgba(0, 0, 0, 0.25);
+}
+ ul li.close{
+   position: absolute;
+   right: 30px;
+   top: 70px;
+   text-indent: -9999px;
+   width: 20px;
+   height: 20px;
+   background: url(img/svg/close.svg) no-repeat 50%;
+   cursor: pointer;
+}
 /* main */
 main{
    width: 100%;
@@ -491,6 +524,7 @@ h3 span{
    background-color: #d6dce2;
    display: inline-block;
    margin:0 10px;
+   /* opacity: 1; */
 
 }
 .footer p{
@@ -511,6 +545,23 @@ h3 span{
    }
    header .pc,main .circlebox{
       display: none;
+   }
+   .menu{
+      flex-direction: column;
+      height: 100vh;
+      align-items: flex-start;
+      justify-content: flex-start;
+   }
+   .menu li{
+      width: 100%;
+   }
+   .menu ul{
+      text-indent: 20px;
+      background-color: #104577;
+      display: none;
+   }
+   .menu ul a{
+      border-bottom: 1px solid rgba(0, 0, 0, 0.25);
    }
    .container main .maintxt h2{
       display: inline-block;

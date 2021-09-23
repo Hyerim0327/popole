@@ -42,7 +42,29 @@
     </nav>
     <ul class="info">
        <li><a href="#">마이페이지</a></li>
-       <li><a href="#">메뉴바</a></li>
+       <li class="open"><a href="#">메뉴바</a></li>
+    </ul>
+    <ul class="menu">
+      <li><a href="#">회사소개</a>
+      <ul>
+         <li><a href="#">브랜드</a></li>
+      </ul>
+      </li>
+      <li><a href="#">코-크</a>
+      <ul>
+         <li><a href="#">스토리</a></li>
+         <li><a href="#">라이프</a></li>
+         <li><a href="#">커뮤니티</a></li>
+      </ul>
+      </li>
+      <li><a href="#">프레스센터</a>
+      <ul>
+         <li><a href="#">보도자료</a></li>
+      </ul>
+      </li>
+      <li><a href="#">저니카풀</a></li>
+      <li><a href="#">월드컵·올림픽</a></li>
+      <li class="close">닫기버튼</li>
     </ul>
    </header>
    <main>
@@ -402,6 +424,7 @@ journeytv_pl.addEventListener('click', journeytv_pl_evt);
    liarr.forEach((slide) => {
       slide.style.opacity = '0.4';
 });
+   
 }
 
    let lief_prevt = function() {
@@ -413,10 +436,11 @@ journeytv_pl.addEventListener('click', journeytv_pl_evt);
       else{
          h--;
       }
-       liarr[h].style.opacity = '1';   
+       liarr[h].style.opacity = '1'; 
+
        $('.lieftxt h3').html('<span>'+lief_h3step[h]+'</span> '+lief_h3txt[h]); 
        $('.lieftxt p').html('<p>'+lief_ptxt[h]+'</p>');
-      //  $('.iconbox li').eq(h).children('div').css({border:'6px solid #000',backgroundColor:'#fff'});
+      //  $('.icon li').eq(h).children('.lian').css({border:'6px solid #000',backgroundColor:'#fff'});
    };
    lief_pr.addEventListener('click', lief_prevt);
 
@@ -439,6 +463,25 @@ journeytv_pl.addEventListener('click', journeytv_pl_evt);
       lief_neevt();
  }, 3000);
 
+//  메뉴버튼
+if (768 < window.innerWidth) {
+   $('.menu').addClass('avt');
+}
+      else{
+         $('.menu').removeClass('avt');
+
+         $('.menu a').on('click',function () {
+            $(this).next().slideToggle();
+            $(this).parent().siblings().children('ul').slideUp();
+         });
+      }
+$('.open').on('click',function() {
+   $('.menu').css('display','flex');
+});
+
+ $('.close').on('click',function(){
+    $('.menu').css('display','none');
+ });
 </script>
 </body>
 </html>
