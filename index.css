@@ -162,26 +162,26 @@ article a{
 .content1 div,.content4 div{
    height: 570px;
 }
-.content2 div{
-   height: 740px;
-   width: 800px;
-   
+article div{
+   text-indent: -9999px;
+}
+.content1 div{
+   background:#384d78 url(img/basics/png/colornotecover.png) no-repeat 50% / contain;
 }
 .content3 div{
    height: 480px;
    background: url(acuvue_sub/acuvue/img/png/first_use.png) no-repeat 50% /cover;
-   text-indent: -9999px;
 }
 .content2 .luce{
    width: 780px;
    height: 410px;
    background: url(img/basics/svg/letter.svg) no-repeat 0 0 / contain;
    margin-right: 7.8125vw;
-   text-indent: -9999px;
 }
-.content4 div{
+.content2 div{
    background: url(img/basics/jpg/cocacola.jpg) no-repeat 30% /cover;
-   text-indent: -9999px;
+   height: 740px;
+   width: 800px;
 }
 .skill{
 padding-bottom: 355px;
