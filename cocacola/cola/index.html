@@ -156,18 +156,21 @@
        <li class="food">
           <img src="img/svg/food.svg" alt="푸드">
           <div class="lian">lian</div>
+          <span class="hr hr1"></span>
           <button>푸드</button>
          </li>
        <li class="travel">
          <img src="img/svg/travel.svg" alt="여행">
-         <div class="lian">lian</div>
+         <div class="lian"></div>
+         <span class="hr hr2"></span>
          <button>여행</button></li>
        <li class="sports">
          <img src="img/svg/sports.svg" alt="스포츠">
-         <div class="lian">lian</div>
+         <div class="lian"></div>
+         <span class="hr hr3"></span>
          <button>스포츠</button></li>
        <li class="coca"><img src="img/svg/cocacola.svg" alt="컬쳐">
-         <div class="lian">lian</div>
+         <div class="lian"></div>
          <button>컬쳐</button></li>
     </ul>
 </div>
@@ -413,7 +416,8 @@ journeytv_pl.addEventListener('click', journeytv_pl_evt);
    let lief_pr = document.getElementsByClassName('prev')[2];
    let lief_ne = document.getElementsByClassName('next')[2];
    let lief_pl = document.getElementsByClassName('play')[3];
-   let liarr =[document.getElementsByClassName('food')[0],document.getElementsByClassName('travel')[0],document.getElementsByClassName('sports')[0],document.getElementsByClassName('coca')[0]]
+   // let liarr =[document.getElementsByClassName('food')[0],document.getElementsByClassName('travel')[0],document.getElementsByClassName('sports')[0],document.getElementsByClassName('coca')[0]];
+   let liarr = [$('.food img'), $('.travel img'),$('.sports img'),$('.coca img')];
    let h = 0;
    let lief_h3txt = ['푸드','여행','스포츠','컬쳐'];
    let lief_h3step = ['STEP01','STEP02','STEP03','STEP04'];
@@ -422,7 +426,8 @@ journeytv_pl.addEventListener('click', journeytv_pl_evt);
    // liarr[0].style.opacity = '0.4';
    const reset2 = () => { // 익명함수 선언
    liarr.forEach((slide) => {
-      slide.style.opacity = '0.4';
+      slide.css('opacity','0.4');
+      // slide.style.opacity = '0.4';
 });
    
 }
@@ -436,7 +441,7 @@ journeytv_pl.addEventListener('click', journeytv_pl_evt);
       else{
          h--;
       }
-       liarr[h].style.opacity = '1'; 
+      liarr[h].css('opacity','1'); 
 
        $('.lieftxt h3').html('<span>'+lief_h3step[h]+'</span> '+lief_h3txt[h]); 
        $('.lieftxt p').html('<p>'+lief_ptxt[h]+'</p>');
@@ -453,7 +458,7 @@ journeytv_pl.addEventListener('click', journeytv_pl_evt);
       else{
          h=0;
       }
-       liarr[h].style.opacity = '1';
+       liarr[h].css('opacity','1');
        $('.lieftxt h3').html('<span>'+lief_h3step[h]+'</span> '+lief_h3txt[h]); 
    $('.lieftxt p').html('<p>'+lief_ptxt[h]+'</p>'); 
    };

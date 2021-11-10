@@ -75,7 +75,7 @@ body{
    width: 330px;
    height: 400px;
    background: no-repeat 0 0/ cover;
-   border-radius: 25px;
+   border-radius: 25px 25px 0 0 ;
  }
  .banner .img{
    width: 360px;
@@ -153,15 +153,18 @@ dl:nth-of-type(odd) dd::before {
 video{
   width: 400px;
   border-radius: 50px 50px 30px 30px;
+  background-color: aqua;
 }
 .iphone{
-  background: url(img/png/iphone.png) no-repeat 0 0 / contain;
+   /*background: url(img/png/iphone_2.png) no-repeat 0 0 / contain, url(img/png/cover.png) no-repeat 0 0 / contain; */
+   background: url(img/png/iphone_2.png) no-repeat 0 0 / contain;
   position: absolute;
   width: 570px;
   height: 970px;
   text-indent: -9999px;
-  left: -28px;
+  left: -30px;
   top: -43px;
+  border-radius: 50px;
 }
 .mainbox .site{
   display: block;
